@@ -18,10 +18,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SDKDemo",
-            path: "./SDKDemo.xcframework",
+            path: "./SDKDemo.xcframework"
+        )
+        .target(
+            name: "SDKDemo",
             dependencies: [
                 .product(name: "Reachability", package: "Reachability")
             ]
-        ),
+        )
     ]
 )
