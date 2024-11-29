@@ -13,12 +13,12 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/tonymillion/Reachability", branch: "master"),
+        .package(url: "https://github.com/tonymillion/Reachability", .branch("master")),
     ],
     targets: [
         .binaryTarget(
             name: "SDKDemo",
-            url: "./SDKDemo.xcframework"
+            path: "./SDKDemo.xcframework"
         )
     ]
 )
