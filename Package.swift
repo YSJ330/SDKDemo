@@ -20,7 +20,7 @@ let package = Package(
         )
     ],
     targets: [
-        .targets(
+        .target(
             name: "SDKDemo",
             dependencies: [
                 "Reachability",
