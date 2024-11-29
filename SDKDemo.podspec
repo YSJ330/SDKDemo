@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'SDK Demo'
-    spec.vendored_frameworks      = 'SDKDemo.xcframework'
+    spec.vendored_frameworks      = 'SDKDemo/SDKDemo.xcframework'
     spec.libraries                = 'c++'
 
     spec.dependency 'Reachability'
