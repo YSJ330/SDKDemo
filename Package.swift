@@ -20,5 +20,9 @@ let package = Package(
             name: "SDKDemo",
             path: "./SDKDemo.xcframework"
         )
+        .target(
+            name: "SDKDemo",
+            dependencies: ["Reachability"]
+        )
     ]
 )
