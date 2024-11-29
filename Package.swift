@@ -14,14 +14,18 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/tonymillion/Reachability", branch: "master"),
+        .binaryTarget(
+            name: "SDKDemoFramework",
+            path: "./SDKDemo.xcframework",
+        )
     ],
     targets: [
-        .binaryTarget(
+        .targets(
             name: "SDKDemo",
-            path: "./SDKDemo.xcframework",
             dependencies: [
-                .product(name: "Reachability", package: "Reachability")
+                "Reachability",
+                "SDKDemoFramework"
             ]
-        ) 
+        )
     ]
 )
