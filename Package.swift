@@ -9,23 +9,24 @@ let package = Package(
     products: [
         .library(
             name: "SDKDemo",
-            targets: ["SDKDemo"]
+            targets: ["SDKFramework"]
         ),
     ],
     dependencies: [
         .package(url: "https://github.com/tonymillion/Reachability", branch: "master"),
     ],
     targets: [
+        .binaryTarget(
+            name: "SDKFramework",
+            path: "./SDKDemo.xcframework"
+        ),
+
         .target(
             name: "SDKDemo",
             dependencies: [
-                "SDKDemoFramework",
-                .product(name: "Reachability"， package: "Reachability")
+                "SDKFramework",
+                .product(name: "Reachability", package: "Reachability")
             ]
-        ),
-        .binaryTarget(
-            name: "SDKDemoFramework",
-            path: "./SDKDemo.xcframework",
         )
     ]
 )
