@@ -10,6 +10,9 @@ let package = Package(
             name: "SDKDemo",
             targets: ["SDKDemo"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/tonymillion/Reachability", branch: "master"),
+    ],
     targets: [
         .binaryTarget(
             name: "SDKDemo",
