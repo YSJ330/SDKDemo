@@ -1,3 +1,4 @@
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
@@ -8,7 +9,8 @@ let package = Package(
     products: [
         .library(
             name: "SDKDemo",
-            targets: ["SDKDemo"]),
+            targets: ["SDKDemo"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/tonymillion/Reachability", branch: "master"),
