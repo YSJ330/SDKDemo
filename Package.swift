@@ -2,26 +2,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "SDKDemo",
+    name: "SDKDemoSPM",
     platforms: [
         .iOS(.v16)
     ],
     products: [
-        .library(name: "SDKDemo", targets: ["SDKDemo"]),
-        .library(name: "SDKFramework", targets: ["SDKFramework"])
+        .library(name: "SDKDemoSPM", targets: ["SDKDemoSPM"]),
+        .library(name: "SDKDemo", targets: ["SDKDemo"])
     ],
     dependencies: [
         .package(url: "https://github.com/tonymillion/Reachability", branch: "master"),
     ],
     targets: [
         .target(
-            name: "SDKDemo",
+            name: "SDKDemoSPM",
             dependencies: [
                 .product(name: "Reachability", package: "Reachability")
             ]
         ),
         .binaryTarget(
-            name: "SDKFramework",
+            name: "SDKDemo",
             path: "./SDKDemo.xcframework"
         )
     ]

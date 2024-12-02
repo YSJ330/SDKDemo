@@ -6,7 +6,6 @@
 //
 
 
-
 public struct Version {
     let version = "1.0.0"
 }
