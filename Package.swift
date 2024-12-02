@@ -7,11 +7,8 @@ let package = Package(
         .iOS(.v16)
     ],
     products: [
-        .library(
-            name: "SDKDemo",
-            type: .dynamic,
-            targets: ["SDKDemo"]
-        ),
+        .library(name: "SDKDemo", targets: ["SDKDemo"]),
+        .library(name: "SDKFramework", targets: ["SDKFramework"])
     ],
     dependencies: [
         .package(url: "https://github.com/tonymillion/Reachability", branch: "master"),
@@ -20,7 +17,6 @@ let package = Package(
         .target(
             name: "SDKDemo",
             dependencies: [
-                "SDKFramework",
                 .product(name: "Reachability", package: "Reachability")
             ]
         ),
