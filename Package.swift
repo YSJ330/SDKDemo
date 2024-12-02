@@ -9,7 +9,8 @@ let package = Package(
     products: [
         .library(
             name: "SDKDemo",
-            targets: ["SDKFramework"]
+            type: .dynamic,
+            targets: ["SDKFramework", "Reachability"]
         ),
     ],
     dependencies: [
@@ -20,13 +21,5 @@ let package = Package(
             name: "SDKFramework",
             path: "./SDKDemo.xcframework"
         ),
-
-        .target(
-            name: "SDKDemo",
-            dependencies: [
-                "SDKFramework",
-                .product(name: "Reachability", package: "Reachability")
-            ]
-        )
     ]
 )
