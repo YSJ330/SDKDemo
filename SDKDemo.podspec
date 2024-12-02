@@ -11,17 +11,6 @@ Pod::Spec.new do |spec|
 
     spec.dependency 'Reachability'
 
-    if !Dir.exist?('build/cocoapods/framework/SDKDemo.framework') || Dir.empty?('build/cocoapods/framework/SDKDemo.framework')
-        raise "
-
-        Kotlin framework 'SDKDemo' doesn't exist yet, so a proper Xcode project can't be generated.
-        'pod install' should be executed after running ':generateDummyFramework' Gradle task:
-
-            ./gradlew :SDKDemo:generateDummyFramework
-
-        Alternatively, proper pod installation is performed during Gradle sync in the IDE (if Podfile location is set)"
-    end
-                
     spec.xcconfig = {
         'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO',
     }
